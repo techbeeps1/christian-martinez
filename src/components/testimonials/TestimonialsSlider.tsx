@@ -184,7 +184,7 @@ export function TestimonialsSlider() {
 
       {/* 3. Slider Arrows (Positioned under first card, aligned to Container) */}
       <Container className="mt-[28px]">
-        <div className="flex items-center md:justify-start justify-center gap-[12px]">
+        <div className="flex items-center md:jusity-start justify-center gap-[12px]">
           <button
             type="button"
             onClick={scrollPrev}

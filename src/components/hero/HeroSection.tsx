@@ -3,15 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { QuoteModal } from "@/components/common/QuoteModal";
 
 export function HeroSection() {
   const [zipCode, setZipCode] = useState("");
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("Auto");
 
   const handleQuoteSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (zipCode.trim()) {
-      alert(`Quote requested with ZIP: ${zipCode}`);
-    }
+    setIsQuoteModalOpen(true);
   };
 
   return (
@@ -45,7 +46,12 @@ export function HeroSection() {
               {/* 3 Categories: Auto, Home, Life */}
               <div className="mt-[30px] sm:mt-[24px] xl:mt-[28px] flex items-center gap-[10px] sm:gap-[14px] md:gap-[8px] lg:gap-[16px] xl:gap-[25px] md:justify-start justify-between">
                 {/* Auto Box */}
-                <div className="flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
+                <div
+                  onClick={() => setSelectedCategory("Auto")}
+                  className={`flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${
+                    selectedCategory === "Auto" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  }`}
+                >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[40px]">
                     <Image
                       src="/auto-icon.svg"
@@ -59,7 +65,12 @@ export function HeroSection() {
                 </div>
 
                 {/* Home Box */}
-                <div className="flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
+                <div
+                  onClick={() => setSelectedCategory("Home")}
+                  className={`flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${
+                    selectedCategory === "Home" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  }`}
+                >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[40px]">
                     <Image
                       src="/house.svg"
@@ -73,7 +84,12 @@ export function HeroSection() {
                 </div>
 
                 {/* Life Box */}
-                <div className="flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
+                <div
+                  onClick={() => setSelectedCategory("Life")}
+                  className={`flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${
+                    selectedCategory === "Life" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  }`}
+                >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[40px]">
                     <Image
                       src="/heart.svg"
@@ -155,6 +171,14 @@ export function HeroSection() {
           </div>
         </Container>
       </section>
+
+      {/* Quote Request Modal */}
+      <QuoteModal
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+        initialZipCode={zipCode}
+        initialType={selectedCategory}
+      />
     </div>
   );
 }

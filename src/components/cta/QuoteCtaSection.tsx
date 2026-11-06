@@ -3,15 +3,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { QuoteModal } from "@/components/common/QuoteModal";
 
 export function QuoteCtaSection() {
   const [zipCode, setZipCode] = useState("");
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   const handleQuoteSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (zipCode.trim()) {
-      alert(`Quote requested with ZIP: ${zipCode}`);
-    }
+    setIsQuoteModalOpen(true);
   };
 
   return (
@@ -69,6 +69,14 @@ export function QuoteCtaSection() {
           </form>
         </div>
       </Container>
+
+      {/* Quote Request Modal */}
+      <QuoteModal
+        isOpen={isQuoteModalOpen}
+        onClose={() => setIsQuoteModalOpen(false)}
+        initialZipCode={zipCode}
+        initialType="Auto"
+      />
     </section>
   );
 }
