@@ -54,11 +54,11 @@ export function FaqSection() {
   };
 
   return (
-    <section id="faq" className="bg-white py-[70px] lg:py-[100px]">
+    <section id="faq" className="bg-white md:py-[140px] py-[110px]">
       {/* Explicit Custom Width (max-w-[950px] with px-[20px] left/right padding, no generic Container) */}
       <div className="w-full max-w-[950px] mx-auto px-[20px]">
         {/* Title */}
-        <h2 className="font-heading text-[36px] sm:text-[42px] lg:text-[46px] leading-[1.15] text-primary text-center mb-[40px]">
+        <h2 className="font-heading text-center md:text-[32px] text-[28px]  text-black mb-[40px]">
           Questions &amp; Answers
         </h2>
 
@@ -75,12 +75,12 @@ export function FaqSection() {
                   type="button"
                   onClick={() => toggleItem(index)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between px-[20px] sm:px-[26px] py-[16px] sm:py-[18px] text-left cursor-pointer select-none hover:bg-[#F2F2F2] transition-colors"
+                  className="w-full flex items-center justify-between p-[20px] text-left cursor-pointer select-none hover:bg-[#F2F2F2] transition-colors"
                 >
-                  <span className="text-[15px] sm:text-[16px] text-primary font-normal">
+                  <span className="text-lg text-black font-normal">
                     {item.question}
                   </span>
-                  <span className="text-primary ml-4 shrink-0 transition-transform duration-200">
+                  <span className="text-black ml-4 shrink-0 transition-transform duration-200">
                     {isOpen ? (
                       <FiMinus className="w-[18px] h-[18px]" />
                     ) : (
@@ -89,11 +89,18 @@ export function FaqSection() {
                   </span>
                 </button>
 
-                {isOpen && (
-                  <div className="px-[20px] sm:px-[26px] pb-[20px] pt-1 text-[14px] sm:text-[15px] leading-[1.65] text-[#555555]">
-                    {item.answer}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${isOpen
+                    ? "grid-rows-[1fr] opacity-100"
+                    : "grid-rows-[0fr] opacity-0"
+                    }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-[20px] pb-[20px] pt-0 text-base sm:text-[15px] leading-[28px] text-black">
+                      {item.answer}
+                    </div>
                   </div>
-                )}
+                </div>
               </div>
             );
           })}

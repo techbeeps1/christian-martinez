@@ -17,80 +17,80 @@ export function HeroSection() {
   return (
     <div>
       {/* Hero Main (Dark Green Background) */}
-      <section className="relative bg-primary pt-[48px] pb-0">
+      <section className="relative bg-primary pt-[28px] sm:pt-[36px] md:pt-[40px] xl:pt-[48px] pb-[32px] md:pb-0">
         <Container>
-          <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-10">
-            {/* Left Column: Natural Size Image Overlapping Downward by exact 96px */}
-            <div className="w-full lg:w-[620px] shrink-0 order-2 lg:order-1 flex justify-start">
-              <div className="relative lg:-mb-[96px] z-20">
+          <div className="flex flex-col md:flex-row items-start justify-between gap-0 md:gap-5 lg:gap-8 xl:gap-10">
+            {/* Left Column: Team Photo (Appears below content on mobile, left on desktop) */}
+            <div className="w-full md:w-[360px] lg:w-[480px] xl:w-[620px] shrink-0 order-2 md:order-1 flex justify-center md:justify-start mt-[30px] sm:mt-[28px] md:mt-0">
+              <div className="relative md:-mb-[50px] lg:-mb-[72px] xl:-mb-[96px] z-20 w-full max-w-[620px]">
                 <Image
                   src="/hero-img.jpg"
                   alt="Christian Martinez Mairena Insurance Agency Team"
                   width={620}
                   height={606}
                   priority
-                  className="w-full lg:w-[620px] h-auto lg:h-[606px] block"
+                  className="w-full h-auto block"
                 />
               </div>
             </div>
 
-            {/* Right Column: Hero Content */}
-            <div className="w-full lg:w-[560px] shrink-0 order-1 lg:order-2 pb-[43px]">
+            {/* Right Column: Hero Content (Appears on top on mobile, right on desktop) */}
+            <div className="w-full md:flex-1 xl:w-[560px] xl:shrink-0 order-1 md:order-2 pb-0 md:pb-[32px] xl:pb-[43px]">
               {/* Heading */}
-              <h1 className="font-heading text-[45px] leading-[1.15] text-white">
-                Insurance built around your life,{" "}
-                <span className="text-accent block sm:inline">right here in San Jose</span>
+              <h1 className="font-heading text-[32px] lg:text-[36px] xl:text-[45px] leading-[1.18] text-white">
+                Insurance built around
+                your life, <span className="text-accent">right here in<br className="sm:hidden" /> San Jose</span>
               </h1>
 
-              {/* 3 Categories: Auto, Home, Life (170x170px, 25px gap, default #3C5451, hover accent) */}
-              <div className="mt-[28px] flex items-center gap-[25px]">
+              {/* 3 Categories: Auto, Home, Life */}
+              <div className="mt-[30px] sm:mt-[24px] xl:mt-[28px] flex items-center gap-[10px] sm:gap-[14px] md:gap-[8px] lg:gap-[16px] xl:gap-[25px] md:justify-start justify-between">
                 {/* Auto Box */}
-                <div className="w-[170px] h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
-                  <div className="flex items-center justify-center mb-3.5">
+                <div className="flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
+                  <div className="flex items-center justify-center mb-[15px] lg:mb-[40px]">
                     <Image
                       src="/auto-icon.svg"
                       alt="Auto"
                       width={68}
                       height={46}
-                      className="w-auto h-auto object-contain"
+                      className="w-auto h-[26px] lg:h-[38px] xl:h-[46px] object-contain"
                     />
                   </div>
-                  <span className="text-[18px] text-center text-white font-normal">Auto</span>
+                  <span className=" text-lg lg:text-[16px] xl:text-lg text-center text-white font-normal">Auto</span>
                 </div>
 
                 {/* Home Box */}
-                <div className="w-[170px] h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
-                  <div className="flex items-center justify-center mb-3.5">
+                <div className="flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
+                  <div className="flex items-center justify-center mb-[15px] lg:mb-[40px]">
                     <Image
                       src="/house.svg"
                       alt="Home"
                       width={60}
                       height={58}
-                      className="w-auto h-auto object-contain"
+                      className="w-auto h-[26px] lg:h-[38px] xl:h-[46px] object-contain"
                     />
                   </div>
-                  <span className="text-[18px] text-center text-white font-normal">Home</span>
+                  <span className="text-lg lg:text-[16px] xl:text-lg text-center text-white font-normal">Home</span>
                 </div>
 
                 {/* Life Box */}
-                <div className="w-[170px] h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
-                  <div className="flex items-center justify-center mb-3.5">
+                <div className="flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default">
+                  <div className="flex items-center justify-center mb-[15px] lg:mb-[40px]">
                     <Image
                       src="/heart.svg"
                       alt="Life"
                       width={61}
                       height={54}
-                      className="w-auto h-auto object-contain"
+                      className="w-auto h-[26px] lg:h-[38px] xl:h-[46px] object-contain"
                     />
                   </div>
-                  <span className="text-[18px] text-center text-white font-normal">Life</span>
+                  <span className="text-lg lg:text-[16px] xl:text-lg text-center text-white font-normal">Life</span>
                 </div>
               </div>
 
-              {/* ZIP Form (Separate Input & Button with clean Gap) */}
+              {/* ZIP Form (Stacked full width on mobile, inline on desktop) */}
               <form
                 onSubmit={handleQuoteSubmit}
-                className="mt-[28px] flex flex-col sm:flex-row items-stretch sm:items-center gap-[16px] sm:gap-3.5"
+                className="mt-[34px]  md:mt-[30px] xl:mt-[36px] flex flex-col md:flex-row items-stretch md:items-center gap-[22px] md:gap-[16px]"
               >
                 <label htmlFor="zip-code-input" className="sr-only">
                   Your ZIP code
@@ -104,18 +104,18 @@ export function HeroSection() {
                   onChange={(e) => setZipCode(e.target.value)}
                   placeholder="Your ZIP code"
                   required
-                  className="w-full flex-1 h-[50px] bg-white text-[#8A8A8A] px-[20px] text-base placeholder:text-[#8A8A8A] outline-none rounded-none focus:ring-1 focus:ring-secondary"
+                  className="w-full  h-[50px] bg-white text-black placeholder:text-[#8A8A8A] px-[20px] text-base outline-none rounded-none focus:ring-1 focus:ring-secondary"
                 />
                 <button
                   type="submit"
-                  className="h-[50px] px-[44px] duration-300 bg-secondary hover:bg-[#a88250] active:bg-[#997342] text-white text-base font-normal tracking-normal whitespace-nowrap cursor-pointer rounded-none flex items-center justify-center"
+                  className="w-full md:w-auto h-[50px] px-[20px] lg:px-[36px] xl:px-[44px] duration-300 bg-secondary hover:bg-[#a88250] active:bg-[#997342] text-white text-base font-normal tracking-normal whitespace-nowrap cursor-pointer rounded-none flex items-center justify-center"
                 >
                   Get a quote
                 </button>
               </form>
 
-              {/* 12 Years Badge */}
-              <div className="mt-[24px]">
+              {/* 12 Years Badge (Centered on mobile, left on desktop) */}
+              <div className="mt-[33px] flex justify-center md:justify-start">
                 <div className="inline-flex items-center gap-[5px] rounded-full border border-[#69F7AE] px-[14px] py-[5px] text-xs text-[#69F7AE]">
                   <Image
                     src="/checkmark.svg"
@@ -140,16 +140,16 @@ export function HeroSection() {
             <div className="hidden lg:block lg:w-[620px] shrink-0" aria-hidden="true" />
 
             {/* Farmers Logo & Text */}
-            <div className="w-full lg:w-[560px] shrink-0 flex flex-wrap items-center gap-[20px] sm:gap-6">
+            <div className="w-full lg:w-[560px] shrink-0 flex  items-center gap-[20px] sm:gap-6">
               <Image
                 src="/farmers-logo.png"
                 alt="Farmers Insurance"
                 width={92}
                 height={49}
-                className="h-auto w-auto"
+                className="h-auto md:w-auto w-[37%]"
               />
               <p className="text-base text-[#7A7A7A]">
-                Proudly serving as your local Farmers<sup>®</sup> <br /> Insurance Agent.
+                Proudly serving as your local Farmers<sup>®</sup> <br className="hidden sm:inline" /> Insurance Agent.
               </p>
             </div>
           </div>

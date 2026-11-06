@@ -3,15 +3,15 @@ import Link from "next/link";
 
 export function ReachOutSection() {
   return (
-    <section id="contact" className="bg-background py-[112px]">
+    <section id="contact" className="bg-background md:py-[112px] py-[75px]">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="lg:col-span-6 max-w-[540px]">
-            <h2 className="font-heading text-[32px]  text-black">
+            <h2 className="font-heading md:text-[32px] text-[28px] text-black">
               How You Can Reach Out to Me
             </h2>
 
-            <div className="mt-[26px] flex flex-col items-start gap-[10px]">
+            <div className="md:mt-[30px] mt-[35px] flex flex-col items-start gap-[10px]">
               <div
                 className="inline-flex  items-center text-base leading-[25px] gap-[2px] "
               >
@@ -63,15 +63,15 @@ export function ReachOutSection() {
                   Office hours:
                 </span>
                 <div className="text-[14px] leading-[1.5] space-y-0.5">
-                  <div className="flex justify-between sm:justify-start sm:gap-4">
+                  <div className="flex justify-start gap-[60px] sm:gap-4">
                     <span className="text-[#8D8B70] w-20">Mon - Fri</span>
                     <span>9:00 AM - 5:00 PM</span>
                   </div>
-                  <div className="flex justify-between sm:justify-start sm:gap-4">
+                  <div className="flex justify-start gap-[60px] sm:gap-4">
                     <span className="text-[#8D8B70] w-20">Sat</span>
                     <span>9:00 AM - 2:00 PM</span>
                   </div>
-                  <div className="flex justify-between sm:justify-start sm:gap-4">
+                  <div className="flex justify-start gap-[60px] sm:gap-4">
                     <span className="text-[#8D8B70] w-20">Sun</span>
                     <span>Closed</span>
                   </div>

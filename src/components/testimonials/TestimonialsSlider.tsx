@@ -113,11 +113,11 @@ export function TestimonialsSlider() {
   };
 
   return (
-    <section className="bg-white pt-[150px] overflow-hidden">
+    <section className="bg-white md:pt-[150px] pt-[100px] overflow-hidden">
       {/* 1. Header (Title & Subtitle aligned to Container) */}
       <Container>
         <div className="max-w-[600px]">
-          <h2 className="font-heading text-[32px]  text-primary">
+          <h2 className="font-heading md:text-[32px]  text-[28px] text-black">
             Trusted Across the Bay Area Since{" "}
             <span className="text-accent">2012</span>
           </h2>
@@ -184,7 +184,7 @@ export function TestimonialsSlider() {
 
       {/* 3. Slider Arrows (Positioned under first card, aligned to Container) */}
       <Container className="mt-[28px]">
-        <div className="flex items-center gap-[12px]">
+        <div className="flex items-center md:justify-start justify-center gap-[12px]">
           <button
             type="button"
             onClick={scrollPrev}

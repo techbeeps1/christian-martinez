@@ -7,6 +7,8 @@ import { TestimonialsSlider } from "@/components/testimonials/TestimonialsSlider
 import { QuoteCtaSection } from "@/components/cta/QuoteCtaSection";
 import { ReachOutSection } from "@/components/contact/ReachOutSection";
 import { FaqSection } from "@/components/faq/FaqSection";
+import { CallbackSection } from "@/components/callback/CallbackSection";
+import { Footer } from "@/components/footer/Footer";
 
 export default function HomePage() {
   return (
@@ -37,6 +39,12 @@ export default function HomePage() {
 
       {/* 9. FAQ / Questions & Answers Section */}
       <FaqSection />
+
+      {/* 10. Callback Request Section */}
+      <CallbackSection />
+
+      {/* 11. Footer */}
+      <Footer />
     </>
   );
 }

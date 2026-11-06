@@ -6,13 +6,13 @@ import { IoLanguageSharp } from "react-icons/io5";
 
 export function MeetAgentSection() {
   return (
-    <section className="bg-white pt-[135px]">
+    <section className="bg-white pt-[60px] md:pt-[90px] lg:pt-[135px]">
       <Container>
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-14">
-          {/* Left Column: Text & Info */}
-          <div className="w-full lg:flex-1 max-w-[560px]">
+        <div className="flex flex-col min-[992px]:flex-row items-center justify-between gap-8 min-[992px]:gap-12 lg:gap-14">
+          {/* Content Column: Bottom on mobile (<992px), Left on desktop (>=992px) */}
+          <div className="w-full min-[992px]:flex-1 min-[992px]:max-w-[560px] ">
             {/* Subtitle / Overline */}
-            <p className="text-accent text-[20px]">
+            <p className="text-accent text-[18px] sm:text-[20px]">
               Meet Your Local Agent
             </p>
 
@@ -79,14 +79,14 @@ export function MeetAgentSection() {
             </div>
           </div>
 
-          {/* Right Column: Office Photo */}
-          <div className="w-full lg:w-auto shrink-0 flex justify-center lg:justify-end">
+          {/* Right Column: Office Photo - Top on mobile (<992px), Right on desktop (>=992px) */}
+          <div className="w-full min-[992px]:w-auto  flex justify-start min-[992px]:justify-end">
             <Image
               src="/story-img.jpg"
               alt="Christian Martinez Mairena in office"
               width={637}
               height={430}
-              className="w-auto h-auto "
+              className="w-full max-w-[637px] h-auto object-cover"
               priority={false}
             />
           </div>

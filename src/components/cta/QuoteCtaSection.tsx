@@ -15,7 +15,7 @@ export function QuoteCtaSection() {
   };
 
   return (
-    <section className="relative py-[150px] mt-[150px] overflow-hidden">
+    <section className="relative py-[150px] md:mt-[150px] mt-[130px] overflow-hidden">
       {/* Background Image */}
       <Image
         src="/cta-bg-img.jpg"
@@ -58,7 +58,7 @@ export function QuoteCtaSection() {
               onChange={(e) => setZipCode(e.target.value)}
               placeholder="Your ZIP code"
               required
-              className="w-full flex-1 h-[50px] bg-white text-[#8A8A8A] px-[20px] text-base placeholder:text-[#8A8A8A] outline-none rounded-none focus:ring-1 focus:ring-secondary"
+              className="w-full  h-[50px] bg-white text-[#8A8A8A] px-[20px] text-base placeholder:text-[#8A8A8A] outline-none rounded-none focus:ring-1 focus:ring-secondary"
             />
             <button
               type="submit"
