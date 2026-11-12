@@ -53,7 +53,7 @@ export function Footer() {
                 <ul className="space-y-[10px]">
                   <li>
                     <Link
-                      href="#auto"
+                      href="/service"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Auto
@@ -61,7 +61,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#home"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Home
@@ -69,7 +69,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#life"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Life
@@ -77,7 +77,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#renters"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Renters
@@ -85,7 +85,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#condo"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Condo
@@ -93,7 +93,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#mobile-home"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Mobile Home
@@ -101,7 +101,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#motorcycle"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Motorcycle
@@ -109,7 +109,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#boat"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Boat
@@ -117,7 +117,7 @@ export function Footer() {
                   </li>
                   <li>
                     <Link
-                      href="#trailer"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Trailer
@@ -134,71 +134,47 @@ export function Footer() {
                 <ul className="space-y-[10px]">
                   <li>
                     <Link
-                      href="#liability"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
-                      General
+                      General Liability
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#workers-comp"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
-                      Liability
+                      Workers&apos; Compensation
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#commercial-auto"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
-                      Workers'
+                      Commercial Auto
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#key-person"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
-                      Comp
+                      Commercial Property
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#commercial-umbrella"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
-                      Commercial
+                      Commercial Umbrella
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="#bonds"
-                      className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
-                    >
-                      Auto
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#bonds"
-                      className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
-                    >
-                      Key Person
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#bonds"
-                      className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
-                    >
-                      Umbrella
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="#bonds"
+                      href="/#coverage"
                       className="text-white hover:text-accent text-sm leading-[27px] block transition-colors"
                     >
                       Bonds

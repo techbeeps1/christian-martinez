@@ -157,12 +157,13 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
             </p>
             <p className="text-[13px] sm:text-[16px] md:text-[20px] text-primary font-normal mt-2">
               Office:{" "}
-              <span
-                className="font-semibold text-black hover:text-secondary"
+              <a
+                href={`tel:${member.back.phone.replace(/[^0-9]/g, "")}`}
+                className="font-semibold text-black hover:text-secondary underline"
                 onClick={(e) => e.stopPropagation()}
               >
                 {member.back.phone}
-              </span>
+              </a>
             </p>
             <p className="text-[13px] sm:text-[16px] md:text-[20px] mt-2 text-primary font-normal">
               Fax: <span className="font-semibold text-black">{member.back.fax}</span>

@@ -94,7 +94,7 @@ export function Header() {
             >
               <div className="bg-[#223533]/95 backdrop-blur-xl p-2 shadow-2xl shadow-black/40">
                 <Link
-                  href="/#auto"
+                  href="/service"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Auto Insurance</span>
@@ -273,7 +273,7 @@ export function Header() {
               <div className="overflow-hidden">
                 <div className="pl-4 pb-2 pt-1 space-y-2 border-l border-white/20 ml-1">
                   <Link
-                    href="/#auto"
+                    href="/service"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >

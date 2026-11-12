@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 
 const personalCoverages = [
@@ -106,9 +107,10 @@ export function WhatWeCoverSection() {
             {/* Boxes Grid: responsive on mobile, 170x170px on desktop */}
             <div className="w-full sm:max-w-[380px] md:max-w-none grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-[25px]">
               {currentCoverages.map((item) => (
-                <div
+                <Link
                   key={item.name}
-                  className="w-full aspect-square md:w-[170px] md:h-[170px] md:aspect-auto bg-primary hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default rounded-none shadow-sm"
+                  href={item.name === "Auto" ? "/service" : "/contact"}
+                  className="w-full aspect-square md:w-[170px] md:h-[170px] md:aspect-auto bg-primary hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer rounded-none shadow-sm group"
                 >
                   <div className="flex items-center justify-center mb-2.5 sm:mb-3 md:mb-3.5">
                     <Image
@@ -116,13 +118,13 @@ export function WhatWeCoverSection() {
                       alt={item.name}
                       width={60}
                       height={50}
-                      className="w-auto h-[36px] sm:h-[42px] md:h-[48px] object-contain"
+                      className="w-auto h-[36px] sm:h-[42px] md:h-[48px] object-contain group-hover:scale-105 transition-transform"
                     />
                   </div>
                   <span className="text-[15px] sm:text-[17px] md:text-[18px] text-center text-white font-normal px-2 leading-tight">
                     {item.name}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
