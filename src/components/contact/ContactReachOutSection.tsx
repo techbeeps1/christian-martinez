@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export function ContactReachOutSection() {
   return (
-    <section className="bg-white pb-[60px] lg:mt-0 mt-[100px] sm:pb-[75px] md:pb-[112px] -mt-[4px]">
+    <section className="bg-white pb-[60px]  mt-[100px] sm:pb-[75px] md:pb-[112px] lg:-mt-[4px]">
       <Container>
         <div className="flex justify-between lg:gap-[20px] gap-[60px] lg:flex-row flex-col items-end">
           {/* Left Column: Contact Details */}
-          <div className="lg:w-6/12 w-full">
+          <div className="lg:w-5/12 w-full">
             {/* Heading */}
             <h2 className="font-heading md:text-[32px] text-[28px] text-black">
               How You Can Reach Out to Me
