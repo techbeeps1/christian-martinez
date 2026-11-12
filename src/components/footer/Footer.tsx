@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { FaSquareFacebook, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { IoLogoFacebook } from "react-icons/io";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { AiFillTikTok } from "react-icons/ai";
 
 export function Footer() {
   return (
@@ -233,7 +235,7 @@ export function Footer() {
                     aria-label="Facebook"
                     className="text-white hover:text-secondary transition-colors"
                   >
-                    <FaSquareFacebook className="w-[22px] h-[22px]" />
+                    <IoLogoFacebook className="w-[25px] h-[25px]" />
                   </Link>
                   <Link
                     href="https://instagram.com"
@@ -242,7 +244,7 @@ export function Footer() {
                     aria-label="Instagram"
                     className="text-white hover:text-secondary transition-colors"
                   >
-                    <FaInstagram className="w-[22px] h-[22px]" />
+                    <FaSquareInstagram className="w-[24px] h-[24px]" />
                   </Link>
                   <Link
                     href="https://tiktok.com"
@@ -251,7 +253,7 @@ export function Footer() {
                     aria-label="TikTok"
                     className="text-white hover:text-secondary transition-colors"
                   >
-                    <FaTiktok className="w-[22px] h-[22px]" />
+                    <AiFillTikTok className="w-[24px] h-[24px]" />
                   </Link>
                 </div>
               </div>
