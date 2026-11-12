@@ -10,7 +10,7 @@ export function MeetAgentSection() {
       <Container>
         <div className="flex flex-col min-[992px]:flex-row items-center justify-between gap-8 min-[992px]:gap-12 lg:gap-14">
           {/* Content Column: Bottom on mobile (<992px), Left on desktop (>=992px) */}
-          <div className="w-full min-[992px]:flex-1 min-[992px]:max-w-[560px] ">
+          <div className="w-full">
             {/* Subtitle / Overline */}
             <p className="text-accent text-[18px] sm:text-[20px]">
               Meet Your Local Agent
@@ -80,9 +80,9 @@ export function MeetAgentSection() {
           </div>
 
           {/* Right Column: Office Photo - Top on mobile (<992px), Right on desktop (>=992px) */}
-          <div className="w-full min-[992px]:w-auto  flex justify-start min-[992px]:justify-end">
+          <div className="w-full flex justify-start min-[992px]:justify-end">
             <Image
-              src="/story-img.jpg"
+              src="/story-team-img.jpg"
               alt="Christian Martinez Mairena in office"
               width={637}
               height={430}

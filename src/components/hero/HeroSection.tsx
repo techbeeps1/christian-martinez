@@ -22,21 +22,21 @@ export function HeroSection() {
         <Container>
           <div className="flex flex-col md:flex-row items-start justify-between gap-0 md:gap-5 lg:gap-8 xl:gap-10">
             {/* Left Column: Team Photo (Appears below content on mobile, left on desktop) */}
-            <div className="w-full md:w-[360px] lg:w-[480px] xl:w-[620px] shrink-0 order-2 md:order-1 flex justify-center md:justify-start mt-[30px] sm:mt-[28px] md:mt-0">
+            <div className="w-full md:w-[50%] xl:w-[620px] shrink-0 order-2 md:order-1 flex justify-center md:justify-start mt-[30px] sm:mt-[28px] md:mt-0">
               <div className="relative md:-mb-[50px] lg:-mb-[72px] xl:-mb-[96px] z-20 w-full max-w-[620px]">
                 <Image
-                  src="/hero-img.jpg"
+                  src="/banner-img.jpg"
                   alt="Christian Martinez Mairena Insurance Agency Team"
-                  width={620}
-                  height={606}
+                  width={1031}
+                  height={687}
                   priority
-                  className="w-full h-auto block"
+                  className="w-full lg:h-[600px] h-auto block object-cover"
                 />
               </div>
             </div>
 
             {/* Right Column: Hero Content (Appears on top on mobile, right on desktop) */}
-            <div className="w-full md:flex-1 xl:w-[560px] xl:shrink-0 order-1 md:order-2 pb-0 md:pb-[32px] xl:pb-[43px]">
+            <div className="w-auto md:flex-1 xl:w-[560px] xl:shrink-0 order-1 md:order-2 pb-0 md:pb-[32px] xl:pb-[43px]">
               {/* Heading */}
               <h1 className="font-heading text-[32px] lg:text-[36px] xl:text-[45px] leading-[1.18] text-white">
                 Insurance built around
@@ -44,11 +44,11 @@ export function HeroSection() {
               </h1>
 
               {/* 3 Categories: Auto, Home, Life */}
-              <div className="mt-[30px] sm:mt-[24px] xl:mt-[28px] flex items-center gap-[10px] sm:gap-[14px] md:gap-[8px] lg:gap-[16px] xl:gap-[25px] md:justify-start justify-between">
+              <div className="mt-[30px] sm:mt-[24px] xl:mt-[28px] flex items-center gap-[10px] sm:gap-[14px] md:gap-[8px] lg:gap-[16px] xl:gap-[25px] justify-between">
                 {/* Auto Box */}
                 <div
                   onClick={() => setSelectedCategory("Auto")}
-                  className={`flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Auto" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[180px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Auto" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
                     }`}
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
@@ -60,7 +60,7 @@ export function HeroSection() {
                       className="w-auto h-[26px] lg:h-[38px] xl:h-[46px] object-contain"
                     />
                   </div>
-                  <span className=" text-lg lg:text-[16px] xl:text-lg text-center text-white font-normal">Auto</span>
+                  <span className=" lg:text-lg xl:text-[20px] text-center text-white font-normal">Auto</span>
                 </div>
 
                 {/* Home Box */}

@@ -97,7 +97,10 @@ export function ReachOutSection() {
 
           {/*  Map  */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="w-full  aspect-square rounded-none overflow-hidden border border-black/10 shadow-sm bg-neutral-100">
+            <div
+              className="w-full "
+              style={{ boxShadow: "0px 4px 84px 0px #0000001A" }}
+            >
               <iframe
                 src="https://maps.google.com/maps?q=1302%20Lincoln%20Ave%20Ste%20206%2C%20San%20Jose%2C%20CA%2095125&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -107,7 +110,7 @@ export function ReachOutSection() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Christian Martinez Mairena Insurance Agency Office Location"
-                className="w-full h-full rounded-none"
+                className="w-full h-[450px] rounded-none"
               />
             </div>
           </div>
