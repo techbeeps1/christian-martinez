@@ -48,7 +48,7 @@ export function HeroSection() {
                 {/* Auto Box */}
                 <div
                   onClick={() => setSelectedCategory("Auto")}
-                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[180px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Auto" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Auto" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
                     }`}
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
@@ -66,7 +66,7 @@ export function HeroSection() {
                 {/* Home Box */}
                 <div
                   onClick={() => setSelectedCategory("Home")}
-                  className={`flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Home" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Home" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
                     }`}
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
@@ -84,7 +84,7 @@ export function HeroSection() {
                 {/* Life Box */}
                 <div
                   onClick={() => setSelectedCategory("Life")}
-                  className={`flex-1 md:max-w-[170px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[170px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Life" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
+                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Life" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
                     }`}
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
