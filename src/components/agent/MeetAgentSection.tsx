@@ -71,7 +71,7 @@ export function MeetAgentSection() {
             {/* CTA Button */}
             <div className="mt-[32px]">
               <Link
-                href="#about"
+                href="/about"
                 className="inline-flex items-center justify-center border border-secondary text-black px-[30px] py-[15px] text-base font-normal rounded-none hover:bg-secondary hover:text-white transition-colors duration-200 cursor-pointer"
               >
                 Read the full story

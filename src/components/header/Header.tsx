@@ -3,11 +3,15 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/config/site";
 import { FiChevronDown, FiX } from "react-icons/fi";
 
 export function Header() {
+  const pathname = usePathname();
+  const isAbout = pathname === "/about";
+  const isContact = pathname === "/contact";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [personalDropdown, setPersonalDropdown] = useState(false);
   const [businessDropdown, setBusinessDropdown] = useState(false);
@@ -53,7 +57,7 @@ export function Header() {
             alt={`${siteConfig.name} Insurance Agency, Inc.`}
             width={393}
             height={66}
-            className="h-[48px] md:h-[34px] lg:h-auto w-auto object-contain"
+            className="h-[40px] md:h-[34px] lg:h-auto w-auto object-contain"
             priority
           />
         </Link>
@@ -76,35 +80,33 @@ export function Header() {
             >
               <span>Personal</span>
               <FiChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${
-                  personalDropdown ? "rotate-180" : ""
-                }`}
+                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${personalDropdown ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
             {/* Dropdown Menu (Zero Radius, Borderless, Smooth Animation) */}
             <div
-              className={`absolute left-0 top-full pt-2.5 w-56 z-50 transition-all duration-200 ease-out origin-top-left ${
-                personalDropdown
-                  ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                  : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-              }`}
+              className={`absolute left-0 top-full pt-2.5 w-56 z-50 transition-all duration-200 ease-out origin-top-left ${personalDropdown
+                ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+                }`}
             >
               <div className="bg-[#223533]/95 backdrop-blur-xl p-2 shadow-2xl shadow-black/40">
                 <Link
-                  href="#auto"
+                  href="/#auto"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Auto Insurance</span>
                 </Link>
                 <Link
-                  href="#home"
+                  href="/#home"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Home Insurance</span>
                 </Link>
                 <Link
-                  href="#life"
+                  href="/#life"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Life Insurance</span>
@@ -126,35 +128,33 @@ export function Header() {
             >
               <span>Business</span>
               <FiChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${
-                  businessDropdown ? "rotate-180" : ""
-                }`}
+                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${businessDropdown ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
             {/* Dropdown Menu (Zero Radius, Borderless, Smooth Animation) */}
             <div
-              className={`absolute left-0 top-full pt-2.5 w-60 z-50 transition-all duration-200 ease-out origin-top-left ${
-                businessDropdown
-                  ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                  : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-              }`}
+              className={`absolute left-0 top-full pt-2.5 w-60 z-50 transition-all duration-200 ease-out origin-top-left ${businessDropdown
+                ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+                }`}
             >
               <div className="bg-[#223533]/95 backdrop-blur-xl p-2 shadow-2xl shadow-black/40">
                 <Link
-                  href="#commercial"
+                  href="/#commercial"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Commercial Insurance</span>
                 </Link>
                 <Link
-                  href="#liability"
+                  href="/#liability"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>General Liability</span>
                 </Link>
                 <Link
-                  href="#workers-comp"
+                  href="/#workers-comp"
                   className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Workers&apos; Compensation</span>
@@ -165,16 +165,24 @@ export function Header() {
 
           {/* About Link */}
           <Link
-            href="#about"
-            className="text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal hover:opacity-85 transition-opacity"
+            href="/about"
+            className={
+              isAbout
+                ? "border border-white/70 px-3.5 py-1 text-[14px] lg:text-[16px] xl:text-[18px] text-white font-normal"
+                : "text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal hover:opacity-85 transition-opacity"
+            }
           >
             About
           </Link>
 
           {/* Contact Link */}
           <Link
-            href="#contact"
-            className="text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal hover:opacity-85 transition-opacity"
+            href="/contact"
+            className={
+              isContact
+                ? "border border-white/70 px-3.5 py-1 text-[14px] lg:text-[16px] xl:text-[18px] text-white font-normal"
+                : "text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal hover:opacity-85 transition-opacity"
+            }
           >
             Contact
           </Link>
@@ -198,20 +206,18 @@ export function Header() {
 
       {/* Offcanvas Backdrop Overlay */}
       <div
-        className={`fixed inset-0 bg-black/60 z-50 transition-opacity duration-300 min-[992px]:hidden ${
-          mobileMenuOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/60 z-50 transition-opacity duration-300 min-[992px]:hidden ${mobileMenuOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setMobileMenuOpen(false)}
         aria-hidden="true"
       />
 
       {/* Offcanvas Side Drawer (Smooth slide-in from right) */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-[300px] sm:w-[350px] max-w-[85vw] bg-primary text-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out min-[992px]:hidden ${
-          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 z-50 h-full w-[300px] sm:w-[350px] max-w-[85vw] bg-primary text-white shadow-2xl flex flex-col transition-transform duration-300 ease-in-out min-[992px]:hidden ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         role="dialog"
         aria-modal="true"
         aria-label="Mobile Navigation Drawer"
@@ -254,36 +260,34 @@ export function Header() {
             >
               <span>Personal</span>
               <FiChevronDown
-                className={`w-5 h-5 text-accent transition-transform duration-300 ${
-                  mobilePersonalOpen ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 text-accent transition-transform duration-300 ${mobilePersonalOpen ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
             {/* Smooth Accordion Submenu */}
             <div
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-                mobilePersonalOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-              }`}
+              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${mobilePersonalOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
             >
               <div className="overflow-hidden">
                 <div className="pl-4 pb-2 pt-1 space-y-2 border-l border-white/20 ml-1">
                   <Link
-                    href="#auto"
+                    href="/#auto"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >
                     Auto Insurance
                   </Link>
                   <Link
-                    href="#home"
+                    href="/#home"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >
                     Home Insurance
                   </Link>
                   <Link
-                    href="#life"
+                    href="/#life"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >
@@ -304,36 +308,34 @@ export function Header() {
             >
               <span>Business</span>
               <FiChevronDown
-                className={`w-5 h-5 text-accent transition-transform duration-300 ${
-                  mobileBusinessOpen ? "rotate-180" : ""
-                }`}
+                className={`w-5 h-5 text-accent transition-transform duration-300 ${mobileBusinessOpen ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
             {/* Smooth Accordion Submenu */}
             <div
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
-                mobileBusinessOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-              }`}
+              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${mobileBusinessOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                }`}
             >
               <div className="overflow-hidden">
                 <div className="pl-4 pb-2 pt-1 space-y-2 border-l border-white/20 ml-1">
                   <Link
-                    href="#commercial"
+                    href="/#commercial"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >
                     Commercial Insurance
                   </Link>
                   <Link
-                    href="#liability"
+                    href="/#liability"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >
                     General Liability
                   </Link>
                   <Link
-                    href="#workers-comp"
+                    href="/#workers-comp"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
                   >
@@ -347,9 +349,11 @@ export function Header() {
           {/* 3. About Link */}
           <div className="border-b border-white/10 py-1">
             <Link
-              href="#about"
+              href="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-3 text-[18px] text-white font-medium hover:text-accent transition-colors"
+              className={`block py-3 text-[18px] font-medium transition-colors ${
+                isAbout ? "text-accent" : "text-white hover:text-accent"
+              }`}
             >
               About
             </Link>
@@ -358,9 +362,11 @@ export function Header() {
           {/* 4. Contact Link */}
           <div className="border-b border-white/10 py-1">
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="block py-3 text-[18px] text-white font-medium hover:text-accent transition-colors"
+              className={`block py-3 text-[18px] font-medium transition-colors ${
+                isContact ? "text-accent" : "text-white hover:text-accent"
+              }`}
             >
               Contact
             </Link>

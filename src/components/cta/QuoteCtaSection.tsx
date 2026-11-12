@@ -15,7 +15,7 @@ export function QuoteCtaSection() {
   };
 
   return (
-    <section className="relative py-[150px] md:mt-[150px] mt-[130px] overflow-hidden">
+    <section className="relative py-[150px] overflow-hidden">
       {/* Background Image */}
       <Image
         src="/cta-bg-img.jpg"

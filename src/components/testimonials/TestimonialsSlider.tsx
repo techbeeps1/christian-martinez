@@ -113,7 +113,7 @@ export function TestimonialsSlider() {
   };
 
   return (
-    <section className="bg-white md:pt-[150px] pt-[100px] overflow-hidden">
+    <section className="bg-white md:mt-[150px] mt-[100px] overflow-hidden md:mb-[150px] mb-[130px]">
       {/* 1. Header (Title & Subtitle aligned to Container) */}
       <Container>
         <div className="max-w-[600px]">

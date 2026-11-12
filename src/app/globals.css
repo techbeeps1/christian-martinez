@@ -79,15 +79,34 @@ body {
   scrollbar-width: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-heading); 
-  font-weight: 400;
+/* 3D Flip Card Effect */
+.team-flip-card {
+  perspective: 1200px;
 }
-footer h3{
-   font-family: var(--font-body);
+
+.team-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.75s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.team-flip-card:hover .team-flip-inner,
+.team-flip-card.flipped .team-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.team-flip-front,
+.team-flip-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.team-flip-back {
+  transform: rotateY(180deg);
 }

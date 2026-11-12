@@ -103,23 +103,23 @@ export function WhatWeCoverSection() {
               </button>
             </div>
 
-            {/* Boxes Grid: 170x170px, 25px gap, default bg-primary, hover bg-accent, text-white, text-[18px] */}
-            <div className="grid grid-cols-2 md:grid-cols-3 md:gap-[25px] gap-[20px]">
+            {/* Boxes Grid: responsive on mobile, 170x170px on desktop */}
+            <div className="w-full sm:max-w-[380px] md:max-w-none grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-[25px]">
               {currentCoverages.map((item) => (
                 <div
                   key={item.name}
-                  className="w-[170px] h-[170px] bg-primary hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default rounded-none shadow-sm"
+                  className="w-full aspect-square md:w-[170px] md:h-[170px] md:aspect-auto bg-primary hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-default rounded-none shadow-sm"
                 >
-                  <div className="flex items-center justify-center mb-3.5">
+                  <div className="flex items-center justify-center mb-2.5 sm:mb-3 md:mb-3.5">
                     <Image
                       src={item.icon}
                       alt={item.name}
                       width={60}
                       height={50}
-                      className="w-auto h-auto object-contain"
+                      className="w-auto h-[36px] sm:h-[42px] md:h-[48px] object-contain"
                     />
                   </div>
-                  <span className="text-[18px] text-center text-white font-normal px-2">
+                  <span className="text-[15px] sm:text-[17px] md:text-[18px] text-center text-white font-normal px-2 leading-tight">
                     {item.name}
                   </span>
                 </div>

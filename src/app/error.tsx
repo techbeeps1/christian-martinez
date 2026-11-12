@@ -19,7 +19,7 @@ export default function ErrorPage({
     <div className="flex min-h-[60vh] items-center justify-center py-16">
       <Container size="sm" className="text-center">
         <p className="text-sm font-semibold uppercase tracking-wider text-secondary">Something went wrong</p>
-        <h1 className="mt-2 text-3xl font-normal text-primary sm:text-4xl">
+        <h1 className="font-heading mt-2 text-3xl font-normal text-primary sm:text-4xl">
           Unexpected Error
         </h1>
         <p className="mt-4 text-base text-primary/80">

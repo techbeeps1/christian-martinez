@@ -195,9 +195,8 @@ export function QuoteModal({
                         {insuranceType}
                       </span>
                       <FiChevronDown
-                        className={`w-[18px] h-[18px] text-black shrink-0 transition-transform duration-200 stroke-[2] ${
-                          isDropdownOpen ? "rotate-180" : ""
-                        }`}
+                        className={`w-[18px] h-[18px] text-black shrink-0 transition-transform duration-200 stroke-[2] ${isDropdownOpen ? "rotate-180" : ""
+                          }`}
                       />
                     </div>
 
@@ -219,11 +218,10 @@ export function QuoteModal({
                               setInsuranceType(type);
                               setIsDropdownOpen(false);
                             }}
-                            className={`px-[20px] py-2.5 text-[15px] cursor-pointer hover:bg-[#F7F4F1] transition-colors flex items-center justify-between ${
-                              insuranceType === type
-                                ? "font-medium text-secondary bg-[#F7F4F1]/60"
-                                : "text-[#1A1A1A]"
-                            }`}
+                            className={`px-[20px] py-2.5 text-[15px] cursor-pointer hover:bg-[#F7F4F1] transition-colors flex items-center justify-between ${insuranceType === type
+                              ? "font-medium text-secondary bg-[#F7F4F1]/60"
+                              : "text-[#1A1A1A]"
+                              }`}
                           >
                             <span>{type}</span>
                             {insuranceType === type && (
@@ -251,7 +249,7 @@ export function QuoteModal({
                     placeholder="Your name"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
-                    className="w-full h-[50px] px-[20px] bg-[#F7F4F1] border border-[#DBD0C4] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
+                    className="w-full h-[50px] px-[20px] bg-[#F7F4F1] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
                   />
                 </div>
 
@@ -270,7 +268,7 @@ export function QuoteModal({
                     placeholder="Your E-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full h-[50px] px-[20px] bg-[#F7F4F1] border border-[#DBD0C4] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
+                    className="w-full h-[50px] px-[20px] bg-[#F7F4F1] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
                   />
                 </div>
 
@@ -289,7 +287,7 @@ export function QuoteModal({
                     placeholder="Your phone number"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full h-[50px] px-[20px] bg-[#F7F4F1] border border-[#DBD0C4] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
+                    className="w-full h-[50px] px-[20px] bg-[#F7F4F1] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
                   />
                 </div>
 
@@ -309,7 +307,7 @@ export function QuoteModal({
                       placeholder="Street"
                       value={address}
                       onChange={(e) => setAddress(e.target.value)}
-                      className="w-full h-[50px] px-[20px] bg-[#F7F4F1] border border-[#DBD0C4] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
+                      className="w-full h-[50px] px-[20px] bg-[#F7F4F1] text-[16px] font-normal text-[#1A1A1A] placeholder:text-[#8A8A8A] leading-normal rounded-none outline-none focus:ring-1 focus:ring-secondary"
                     />
                   </div>
 
