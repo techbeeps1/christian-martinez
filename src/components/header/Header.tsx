@@ -12,6 +12,7 @@ export function Header() {
   const pathname = usePathname();
   const isAbout = pathname === "/about";
   const isContact = pathname === "/contact";
+  const isPersonal = pathname === "/service" || pathname === "/auto-insurance";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [personalDropdown, setPersonalDropdown] = useState(false);
   const [businessDropdown, setBusinessDropdown] = useState(false);
@@ -75,39 +76,43 @@ export function Header() {
           >
             <button
               type="button"
-              className="inline-flex items-center gap-1.5 text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal cursor-pointer py-3 hover:opacity-85 transition-opacity"
+              className={`inline-flex items-center gap-1.5 text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] font-normal cursor-pointer py-3 transition-colors ${
+                isPersonal ? "text-secondary" : "text-white hover:text-secondary"
+              }`}
               aria-expanded={personalDropdown}
             >
               <span>Personal</span>
               <FiChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${personalDropdown ? "rotate-180" : ""
-                  }`}
+                className={`h-4 w-4 transition-transform duration-300 ease-out ${
+                  personalDropdown ? "rotate-180" : ""
+                } ${isPersonal ? "text-secondary" : "text-white"}`}
               />
             </button>
 
             {/* Dropdown Menu (Zero Radius, Borderless, Smooth Animation) */}
             <div
-              className={`absolute left-0 top-full pt-2.5 w-56 z-50 transition-all duration-200 ease-out origin-top-left ${personalDropdown
-                ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-                }`}
+              className={`absolute left-0 top-full pt-2.5 w-56 z-50 transition-all duration-200 ease-out origin-top-left ${
+                personalDropdown
+                  ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                  : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+              }`}
             >
               <div className="bg-[#223533]/95 backdrop-blur-xl p-2 shadow-2xl shadow-black/40">
                 <Link
                   href="/service"
-                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-secondary hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Auto Insurance</span>
                 </Link>
                 <Link
                   href="/#home"
-                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-secondary hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Home Insurance</span>
                 </Link>
                 <Link
                   href="/#life"
-                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-secondary hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Life Insurance</span>
                 </Link>
@@ -123,39 +128,41 @@ export function Header() {
           >
             <button
               type="button"
-              className="inline-flex items-center gap-1.5 text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal cursor-pointer py-3 hover:opacity-85 transition-opacity"
+              className="inline-flex items-center gap-1.5 text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal cursor-pointer py-3 hover:text-secondary transition-colors"
               aria-expanded={businessDropdown}
             >
               <span>Business</span>
               <FiChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${businessDropdown ? "rotate-180" : ""
-                  }`}
+                className={`h-4 w-4 transition-transform duration-300 ease-out text-white ${
+                  businessDropdown ? "rotate-180" : ""
+                }`}
               />
             </button>
 
             {/* Dropdown Menu (Zero Radius, Borderless, Smooth Animation) */}
             <div
-              className={`absolute left-0 top-full pt-2.5 w-60 z-50 transition-all duration-200 ease-out origin-top-left ${businessDropdown
-                ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
-                }`}
+              className={`absolute left-0 top-full pt-2.5 w-60 z-50 transition-all duration-200 ease-out origin-top-left ${
+                businessDropdown
+                  ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                  : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+              }`}
             >
               <div className="bg-[#223533]/95 backdrop-blur-xl p-2 shadow-2xl shadow-black/40">
                 <Link
                   href="/#commercial"
-                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-secondary hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Commercial Insurance</span>
                 </Link>
                 <Link
                   href="/#liability"
-                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-secondary hover:bg-white/10 transition-all duration-150"
                 >
                   <span>General Liability</span>
                 </Link>
                 <Link
                   href="/#workers-comp"
-                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-white hover:bg-white/10 transition-all duration-150"
+                  className="flex items-center justify-between px-4 py-2.5 text-[15px] font-normal text-white/90 hover:text-secondary hover:bg-white/10 transition-all duration-150"
                 >
                   <span>Workers&apos; Compensation</span>
                 </Link>
@@ -166,11 +173,9 @@ export function Header() {
           {/* About Link */}
           <Link
             href="/about"
-            className={
-              isAbout
-                ? "border border-white/70 px-3.5 py-1 text-[14px] lg:text-[16px] xl:text-[18px] text-white font-normal"
-                : "text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal hover:opacity-85 transition-opacity"
-            }
+            className={`text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] font-normal transition-colors cursor-pointer ${
+              isAbout ? "text-secondary" : "text-white hover:text-secondary"
+            }`}
           >
             About
           </Link>
@@ -178,11 +183,9 @@ export function Header() {
           {/* Contact Link */}
           <Link
             href="/contact"
-            className={
-              isContact
-                ? "border border-white/70 px-3.5 py-1 text-[14px] lg:text-[16px] xl:text-[18px] text-white font-normal"
-                : "text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] text-white font-normal hover:opacity-85 transition-opacity"
-            }
+            className={`text-[14px] lg:text-[16px] xl:text-[18px] leading-[100%] tracking-[0%] font-normal transition-colors cursor-pointer ${
+              isContact ? "text-secondary" : "text-white hover:text-secondary"
+            }`}
           >
             Contact
           </Link>
@@ -255,41 +258,45 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobilePersonalOpen((prev) => !prev)}
-              className="w-full flex items-center justify-between py-3 text-[18px] text-white font-medium hover:text-accent transition-colors cursor-pointer"
+              className={`w-full flex items-center justify-between py-3 text-[18px] font-medium transition-colors cursor-pointer ${
+                isPersonal ? "text-secondary" : "text-white hover:text-secondary"
+              }`}
               aria-expanded={mobilePersonalOpen}
             >
               <span>Personal</span>
               <FiChevronDown
-                className={`w-5 h-5 text-accent transition-transform duration-300 ${mobilePersonalOpen ? "rotate-180" : ""
-                  }`}
+                className={`w-5 h-5 transition-transform duration-300 ${
+                  isPersonal ? "text-secondary" : "text-accent"
+                } ${mobilePersonalOpen ? "rotate-180" : ""}`}
               />
             </button>
 
             {/* Smooth Accordion Submenu */}
             <div
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${mobilePersonalOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                }`}
+              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                mobilePersonalOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+              }`}
             >
               <div className="overflow-hidden">
                 <div className="pl-4 pb-2 pt-1 space-y-2 border-l border-white/20 ml-1">
                   <Link
                     href="/service"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
+                    className="block py-1.5 text-[15px] text-white/80 hover:text-secondary transition-colors"
                   >
                     Auto Insurance
                   </Link>
                   <Link
                     href="/#home"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
+                    className="block py-1.5 text-[15px] text-white/80 hover:text-secondary transition-colors"
                   >
                     Home Insurance
                   </Link>
                   <Link
                     href="/#life"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
+                    className="block py-1.5 text-[15px] text-white/80 hover:text-secondary transition-colors"
                   >
                     Life Insurance
                   </Link>
@@ -303,41 +310,43 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileBusinessOpen((prev) => !prev)}
-              className="w-full flex items-center justify-between py-3 text-[18px] text-white font-medium hover:text-accent transition-colors cursor-pointer"
+              className="w-full flex items-center justify-between py-3 text-[18px] text-white font-medium hover:text-secondary transition-colors cursor-pointer"
               aria-expanded={mobileBusinessOpen}
             >
               <span>Business</span>
               <FiChevronDown
-                className={`w-5 h-5 text-accent transition-transform duration-300 ${mobileBusinessOpen ? "rotate-180" : ""
-                  }`}
+                className={`w-5 h-5 text-accent transition-transform duration-300 ${
+                  mobileBusinessOpen ? "rotate-180" : ""
+                }`}
               />
             </button>
 
             {/* Smooth Accordion Submenu */}
             <div
-              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${mobileBusinessOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                }`}
+              className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                mobileBusinessOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+              }`}
             >
               <div className="overflow-hidden">
                 <div className="pl-4 pb-2 pt-1 space-y-2 border-l border-white/20 ml-1">
                   <Link
                     href="/#commercial"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
+                    className="block py-1.5 text-[15px] text-white/80 hover:text-secondary transition-colors"
                   >
                     Commercial Insurance
                   </Link>
                   <Link
                     href="/#liability"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
+                    className="block py-1.5 text-[15px] text-white/80 hover:text-secondary transition-colors"
                   >
                     General Liability
                   </Link>
                   <Link
                     href="/#workers-comp"
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block py-1.5 text-[15px] text-white/80 hover:text-white transition-colors"
+                    className="block py-1.5 text-[15px] text-white/80 hover:text-secondary transition-colors"
                   >
                     Workers&apos; Compensation
                   </Link>
@@ -352,7 +361,7 @@ export function Header() {
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
               className={`block py-3 text-[18px] font-medium transition-colors ${
-                isAbout ? "text-accent" : "text-white hover:text-accent"
+                isAbout ? "text-secondary" : "text-white hover:text-secondary"
               }`}
             >
               About
@@ -365,7 +374,7 @@ export function Header() {
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className={`block py-3 text-[18px] font-medium transition-colors ${
-                isContact ? "text-accent" : "text-white hover:text-accent"
+                isContact ? "text-secondary" : "text-white hover:text-secondary"
               }`}
             >
               Contact

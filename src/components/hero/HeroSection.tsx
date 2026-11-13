@@ -48,8 +48,7 @@ export function HeroSection() {
                 {/* Auto Box */}
                 <div
                   onClick={() => setSelectedCategory("Auto")}
-                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Auto" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
-                    }`}
+                  className="flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer"
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
                     <Image
@@ -60,14 +59,13 @@ export function HeroSection() {
                       className="w-auto h-[26px] lg:h-[38px] xl:h-[46px] object-contain"
                     />
                   </div>
-                  <span className=" lg:text-lg xl:text-[20px] text-center text-white font-normal">Auto</span>
+                  <span className="lg:text-lg xl:text-[20px] text-center text-white font-normal">Auto</span>
                 </div>
 
                 {/* Home Box */}
                 <div
                   onClick={() => setSelectedCategory("Home")}
-                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Home" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
-                    }`}
+                  className="flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer"
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
                     <Image
@@ -84,8 +82,7 @@ export function HeroSection() {
                 {/* Life Box */}
                 <div
                   onClick={() => setSelectedCategory("Life")}
-                  className={`flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer ${selectedCategory === "Life" ? "bg-accent" : "bg-[#3C5451] hover:bg-accent/80"
-                    }`}
+                  className="flex-1 md:max-w-[180px] max-w-[110px] h-[110px] md:h-[95px] lg:h-[140px] xl:h-[180px] bg-[#3C5451] hover:bg-accent transition-colors duration-200 flex flex-col items-center justify-center cursor-pointer"
                 >
                   <div className="flex items-center justify-center mb-[15px] lg:mb-[28px]">
                     <Image
@@ -159,7 +156,7 @@ export function HeroSection() {
                 alt="Farmers Insurance"
                 width={92}
                 height={49}
-                className="h-auto md:w-auto w-[37%]"
+                className="h-auto"
               />
               <p className="text-base text-[#7A7A7A]">
                 Proudly serving as your local Farmers<sup>®</sup> <br className="hidden sm:inline" /> Insurance Agent.

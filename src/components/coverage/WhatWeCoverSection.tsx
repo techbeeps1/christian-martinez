@@ -44,7 +44,7 @@ export function WhatWeCoverSection() {
           alt=""
           width={532}
           height={661}
-          className="w-auto h-auto block"
+          className=" h-auto block"
           priority={false}
         />
       </div>
