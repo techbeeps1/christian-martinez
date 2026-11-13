@@ -67,7 +67,7 @@ export function AboutHeroSection() {
                 alt="Farmers Insurance"
                 width={92}
                 height={49}
-                className="h-auto md:w-auto w-[37%]"
+                className="h-auto"
               />
               <p className="text-base text-[#7A7A7A]">
                 Proudly serving as your local Farmers<sup>®</sup>{" "}
