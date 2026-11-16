@@ -27,7 +27,7 @@ export function ServiceHeroSection() {
               </h1>
 
               {/* Subtitle / Description */}
-              <p className="mt-[16px] sm:mt-[20px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[28px] sm:leading-[34px] md:leading-[38px] text-white max-w-[530px] font-normal">
+              <p className="mt-[16px] sm:mt-[20px] text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] leading-[28px] sm:leading-[34px] md:leading-[38px] text-white font-normal">
                 Most auto policies stop at the state minimum. We start with what
                 you actually have to protect, then build coverage — and a price —
                 around that, with an easy way to bundle in home for more savings.
@@ -49,12 +49,12 @@ export function ServiceHeroSection() {
             <div className="w-full md:w-[380px] lg:w-[480px] xl:w-[620px] shrink-0 flex justify-center md:justify-end mt-[20px] md:mt-0">
               <div className="relative -mb-[96px] md:-mb-[70px] lg:-mb-[110px] xl:-mb-[140px] z-20 w-full max-w-[620px]">
                 <Image
-                  src="/service-right-img.jpg"
+                  src="/service-hero-img.jpg"
                   alt="Auto Insurance - Christian Martinez Mairena Insurance Agency"
                   width={624}
                   height={452}
                   priority
-                  className="w-full h-auto block object-cover shadow-sm"
+                  className="w-full lg:h-[452px] h-auto block object-cover shadow-sm"
                 />
               </div>
             </div>

@@ -75,31 +75,31 @@ export function CallbackSection() {
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
                 required
-                className={`w-full h-[50px] bg-white px-[18px] pr-[44px] text-base outline-none rounded-none appearance-none cursor-pointer focus:ring-1 focus:ring-secondary ${topic ? "text-black" : "text-[#8A8A8A]"
+                className={`w-full h-[50px] bg-white px-[18px] pr-[44px] text-base font-sans outline-none rounded-none appearance-none cursor-pointer focus:ring-1 focus:ring-secondary ${topic ? "text-black" : "text-[#8A8A8A]"
                   }`}
               >
-                <option value="" disabled hidden>
+                <option value="" disabled hidden className="font-sans">
                   What do you need help with?
                 </option>
-                <option value="Auto Insurance" className="text-black">
+                <option value="Auto Insurance" className="text-black font-sans">
                   Auto Insurance
                 </option>
-                <option value="Home Insurance" className="text-black">
+                <option value="Home Insurance" className="text-black font-sans">
                   Home Insurance
                 </option>
-                <option value="Life Insurance" className="text-black">
+                <option value="Life Insurance" className="text-black font-sans">
                   Life Insurance
                 </option>
-                <option value="Business Insurance" className="text-black">
+                <option value="Business Insurance" className="text-black font-sans">
                   Business Insurance
                 </option>
-                <option value="Renters Insurance" className="text-black">
+                <option value="Renters Insurance" className="text-black font-sans">
                   Renters Insurance
                 </option>
-                <option value="Umbrella Insurance" className="text-black">
+                <option value="Umbrella Insurance" className="text-black font-sans">
                   Umbrella Insurance
                 </option>
-                <option value="General Question / Other" className="text-black">
+                <option value="General Question / Other" className="text-black font-sans">
                   General Question / Other
                 </option>
               </select>

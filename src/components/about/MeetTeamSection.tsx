@@ -54,8 +54,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
 
   return (
     <div
-      className={`team-flip-card w-full h-[313px] sm:h-[420px] md:h-[452px] ${flipped ? "flipped" : ""
-        }`}
+      className="group [perspective:1200px] [-webkit-perspective:1200px] w-full h-[313px] sm:h-[420px] md:h-[452px] cursor-pointer outline-none select-none"
       onClick={() => setFlipped((prev) => !prev)}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -67,9 +66,17 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
       role="button"
       aria-label={`${member.name} details card. Hover or click to flip.`}
     >
-      <div className="team-flip-inner">
+      <div
+        className={`relative w-full h-full transition-transform duration-[800ms] [transition-timing-function:cubic-bezier(0.4,0,0.2,1)] [transform-style:preserve-3d] [-webkit-transform-style:preserve-3d] will-change-transform group-hover:[transform:rotateY(180deg)] ${
+          flipped ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
         {/* FRONT SIDE */}
-        <div className="team-flip-front bg-white border border-primary px-[25px] sm:px-[45px] py-[25px] sm:py-[40px] flex flex-col justify-between overflow-hidden relative shadow-sm">
+        <div
+          className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [-moz-backface-visibility:hidden] [transform-style:flat] [-webkit-transform-style:flat] subpixel-antialiased [transform:rotateY(0deg)_translateZ(1px)] pointer-events-auto group-hover:pointer-events-none bg-white border border-primary px-[25px] sm:px-[45px] py-[25px] sm:py-[40px] flex flex-col justify-between relative shadow-sm ${
+            flipped ? "pointer-events-none" : ""
+          }`}
+        >
           {/* Faint Logo Watermark in Bottom-Right */}
           <div className="absolute right-[26px] bottom-[20px] w-[190px] h-[190px] sm:w-[275px] sm:h-[275px] overflow-hidden pointer-events-none">
             <Image
@@ -82,7 +89,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
           </div>
 
           {/* Top: Photo or Avatar */}
-          <div className="relative z-10">
+          <div className="relative">
             {member.isAvatar ? (
               <div className="w-[115px] h-[115px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] rounded-full bg-primary flex items-center justify-center overflow-hidden">
                 <CiUser className="text-white h-[85px] w-[85px] sm:h-[120px] sm:w-[120px] md:h-[150px] md:w-[150px]" />
@@ -101,7 +108,7 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
           </div>
 
           {/* Bottom: Name, Role & Circular Arrow Button */}
-          <div className="relative z-10 flex items-end justify-between pt-4">
+          <div className="relative flex items-end justify-between pt-4">
             <div>
               <h3 className="font-heading text-[28px] sm:text-[32px] text-primary">
                 {member.name}
@@ -122,7 +129,11 @@ function TeamCard({ member }: { member: (typeof teamMembers)[0] }) {
         </div>
 
         {/* BACK SIDE */}
-        <div className="team-flip-back bg-background border border-primary p-6 sm:p-8 flex flex-col justify-between text-left overflow-hidden shadow-sm">
+        <div
+          className={`absolute inset-0 w-full h-full [backface-visibility:hidden] [-webkit-backface-visibility:hidden] [-moz-backface-visibility:hidden] [transform-style:flat] [-webkit-transform-style:flat] subpixel-antialiased [transform:rotateY(180deg)_translateZ(1px)] pointer-events-none group-hover:pointer-events-auto bg-background border border-primary p-6 sm:p-8 flex flex-col justify-between text-left shadow-sm ${
+            flipped ? "pointer-events-auto" : ""
+          }`}
+        >
           <div>
             {/* Specialties Heading */}
             <h4 className="text-[18px] sm:text-[22px] md:text-[25px] font-semibold text-primary">

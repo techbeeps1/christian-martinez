@@ -82,10 +82,10 @@ export function MeetAgentSection() {
           {/* Right Column: Office Photo - Top on mobile (<992px), Right on desktop (>=992px) */}
           <div className="w-full flex justify-start min-[992px]:justify-end">
             <Image
-              src="/story-team-img.jpg"
+              src="/about-img.png"
               alt="Christian Martinez Mairena in office"
-              width={637}
-              height={430}
+              width={1466}
+              height={898}
               className="w-full max-w-[637px] h-auto object-cover"
               priority={false}
             />

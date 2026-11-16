@@ -30,9 +30,10 @@ export function AboutHeroSection() {
                     alt="Certified"
                     width={18}
                     height={18}
-                    className="h-auto w-auto"
+                    priority
+                    className="w-[18px] h-[18px] shrink-0"
                   />
-                  <span className="text-sm sm:text-base leading-[24px]">
+                  <span className="text-sm sm:text-base leading-[24px] whitespace-nowrap">
                     12 years in business
                   </span>
                 </div>
@@ -43,7 +44,7 @@ export function AboutHeroSection() {
             <div className="w-full md:w-[380px] lg:w-[480px] xl:w-[620px] shrink-0 flex justify-center md:justify-end mt-[20px] md:mt-0">
               <div className="relative -mb-[96px] md:-mb-[50px] lg:-mb-[72px] xl:-mb-[96px] z-20 w-full max-w-[620px]">
                 <Image
-                  src="/story-img.jpg"
+                  src="/about-img.png"
                   alt="Christian Martinez Mairena Insurance Agency"
                   width={637}
                   height={430}
