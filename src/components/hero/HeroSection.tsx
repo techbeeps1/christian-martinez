@@ -25,7 +25,7 @@ export function HeroSection() {
             <div className="w-full md:w-[50%] xl:w-[620px] shrink-0 order-2 md:order-1 flex justify-center md:justify-start mt-[30px] sm:mt-[28px] md:mt-0">
               <div className="relative md:-mb-[50px] lg:-mb-[72px] xl:-mb-[96px] z-20 w-full max-w-[620px]">
                 <Image
-                  src="/hero_image.jpg"
+                  src="/hom_hero_img.jpg"
                   alt="Christian Martinez Mairena Insurance Agency Team"
                   width={1031}
                   height={687}
